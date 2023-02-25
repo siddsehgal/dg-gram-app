@@ -1,6 +1,7 @@
 import { Sequelize } from "sequelize";
 // import Config from "./config";
 
+// Server Config Changed
 const sequelize = new Sequelize({
   database: process.env.MYSQL_DB,
   username: process.env.MYSQL_USER,
