@@ -54,7 +54,7 @@ const InitModel = async (connection: Sequelize) => {
   );
   console.log("PostLike Model Running");
 
-  await PostLike.sync({ alter: true });
+  // await PostLike.sync({ alter: true });
   return PostLike;
 };
 

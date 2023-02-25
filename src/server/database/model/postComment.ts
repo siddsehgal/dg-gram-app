@@ -59,7 +59,7 @@ const InitModel = async (connection: Sequelize) => {
   );
   console.log("PostComment Model Running");
 
-  await PostComment.sync({ alter: true });
+  // await PostComment.sync({ alter: true });
   return PostComment;
 };
 export { PostComment as PostCommentModelType };

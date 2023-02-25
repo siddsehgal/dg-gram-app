@@ -77,7 +77,7 @@ const InitModel = async (connection: Sequelize) => {
   );
   console.log("User Model Running");
 
-  await User.sync({ alter: true });
+  // await User.sync({ alter: true });
   return User;
 };
 export { User as UserModelType };

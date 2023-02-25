@@ -75,7 +75,7 @@ const InitModel = async (connection: Sequelize) => {
 
   console.log("Post Model Running");
 
-  await Post.sync({ alter: true });
+  // await Post.sync({ alter: true });
   return Post;
 };
 export { Post as PostModelType };

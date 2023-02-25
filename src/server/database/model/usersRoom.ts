@@ -49,7 +49,7 @@ const InitModel = async (connection: Sequelize) => {
   );
   console.log("UsersRoom Model Running");
 
-  await UsersRoom.sync({ alter: true });
+  // await UsersRoom.sync({ alter: true });
   return UsersRoom;
 };
 export { UsersRoom as UsersRoomType };

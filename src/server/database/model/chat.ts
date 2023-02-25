@@ -65,7 +65,7 @@ const InitModel = async (connection: Sequelize) => {
   });
   console.log("Chat Model Running");
 
-  await Chat.sync({ alter: true });
+  // await Chat.sync({ alter: true });
   return Chat;
 };
 

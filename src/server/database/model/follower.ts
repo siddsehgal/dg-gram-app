@@ -54,7 +54,7 @@ const InitModel = async (connection: Sequelize) => {
   );
   console.log("Follower Model Running");
 
-  await Follower.sync({ alter: true });
+  // await Follower.sync({ alter: true });
   return Follower;
 };
 
