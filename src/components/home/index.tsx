@@ -9,18 +9,10 @@ import { BottomNavEnum, changeBottomNav } from "redux/features/bottomNav";
 import { Box } from "@mui/material";
 
 export default function Home() {
-  const [show, setShow] = React.useState(ShowType.signIn);
-
   const dispatch = useDispatch();
-  dispatch(changeBottomNav(BottomNavEnum.Home));
 
   React.useEffect(() => {
-    if (
-      localStorage.getItem("jwt") &&
-      localStorage.getItem("isEmailVerified") === "false"
-    ) {
-      setShow(ShowType.otp);
-    }
+    dispatch(changeBottomNav(BottomNavEnum.Home));
   }, []);
 
   return (

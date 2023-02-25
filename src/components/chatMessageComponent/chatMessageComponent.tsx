@@ -24,7 +24,7 @@ export default function ChatMessageComponent({ chat, other_user_id }: any) {
           borderRadius: "5px",
         }}
       >
-        <Box sx={{ wordWrap: "break-word" }}>{chat.message}</Box>
+        <Typography sx={{ wordWrap: "break-word" }}>{chat.message}</Typography>
       </Box>
       <Typography
         sx={{

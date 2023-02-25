@@ -64,12 +64,12 @@ export default function ChatUserComponent() {
     setUsersRoomId(users_room_id);
     setUserId(req_user_id);
 
-    await APICall({
-      ...AuthResource.SocketAPI,
-      enqueueSnackbar,
-    });
+    // await APICall({
+    //   ...AuthResource.SocketAPI,
+    //   enqueueSnackbar,
+    // });
 
-    socket = io();
+    socket = io(`${process.env.NEXT_PUBLIC_BACKEND_SOCKET_URL}`);
 
     socket.emit("JoinRoomWithUser", { user_id, my_id: req_user_id });
 

@@ -14,12 +14,12 @@ export default function ChatComponent() {
   const { enqueueSnackbar } = useSnackbar();
 
   const dispatch = useDispatch();
-  dispatch(changeBottomNav(BottomNavEnum.Chat));
 
   const [users, setUsers] = React.useState<any[]>([]);
   const [isLoading, setLoading] = React.useState(false);
 
   React.useEffect(() => {
+    dispatch(changeBottomNav(BottomNavEnum.Chat));
     getData();
   }, []);
 

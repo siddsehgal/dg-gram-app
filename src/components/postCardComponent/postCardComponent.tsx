@@ -9,7 +9,6 @@ export default function PostCardComponent({
   setPosts,
 }: PostCardComponentType) {
   const router = useRouter();
-  console.log(post);
 
   return (
     <>

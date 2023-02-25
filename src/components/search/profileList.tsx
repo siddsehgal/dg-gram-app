@@ -3,7 +3,6 @@ import Box from "@mui/material/Box";
 import ProfileCardComponent from "./profileCard";
 
 export default function ProfileListComponent({ users }: any) {
-  console.log("ProfileListComponent", users);
   return (
     <>
       <Box

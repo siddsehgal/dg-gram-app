@@ -28,8 +28,6 @@ export default function PostLikeSectionComponent({
   const { enqueueSnackbar } = useSnackbar();
 
   const handleLikeClick = () => {
-    console.log(data);
-
     if (is_liked) {
       // Call Remove Like API
       setData((prev: any) => ({
@@ -72,9 +70,9 @@ export default function PostLikeSectionComponent({
           {is_liked ? <ThumbUpAltIcon /> : <ThumbUpOffAltIcon />}
         </IconButton>
 
-        <IconButton>
+        {/* <IconButton>
           <CommentIcon />
-        </IconButton>
+        </IconButton> */}
       </Box>
       <Box sx={{ marginLeft: "1.5%" }}>
         {" "}

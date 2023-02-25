@@ -74,4 +74,4 @@ const GetChatUsersList = async (
   });
 };
 
-export default withProtected(SearchUserHandler);
+export default await withProtected(SearchUserHandler);

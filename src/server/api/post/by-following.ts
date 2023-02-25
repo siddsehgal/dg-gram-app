@@ -64,4 +64,4 @@ const GetPosts = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   });
 };
 
-export default withProtected(PostByFollowingHandler);
+export default await withProtected(PostByFollowingHandler);

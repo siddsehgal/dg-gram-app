@@ -47,7 +47,9 @@ export async function APICall({
   });
 
   let queryStringUrl = query ? new URLSearchParams(query).toString() : null;
+  console.log(process.env.NEXT_PUBLIC_BACKEND_API_URL);
 
+  if (!endpoint) endpoint = process.env.NEXT_PUBLIC_BACKEND_API_URL;
   let reqOptions = {
     url: `${!endpoint ? "" : endpoint}${URL}${
       queryStringUrl ? `?${queryStringUrl}` : ""
@@ -89,8 +91,6 @@ function popUpMessage(
   popUpOrNot: messageType
 ) {
   const { success, message, response } = res;
-
-  console.log(popUpOrNot);
 
   if (!success && popUpOrNot.error)
     enqueueSnackbar(message, { variant: "error" });

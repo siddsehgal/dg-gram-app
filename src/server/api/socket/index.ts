@@ -47,4 +47,4 @@ export function getUsersRoom(arr: number[]) {
   const users = arr.sort((a, b) => a - b);
   return users.join(",");
 }
-export default withProtected(SocketHandler);
+export default await withProtected(SocketHandler);

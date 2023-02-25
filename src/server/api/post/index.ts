@@ -128,4 +128,4 @@ const DeletePost = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   });
 };
 
-export default withProtected(PostHandler);
+export default await withProtected(PostHandler);

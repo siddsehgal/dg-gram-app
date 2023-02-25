@@ -137,4 +137,4 @@ const PatchUser = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   });
 };
 
-export default withProtected(UserHandler);
+export default await withProtected(UserHandler);

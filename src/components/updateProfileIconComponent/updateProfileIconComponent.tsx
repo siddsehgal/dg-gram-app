@@ -37,11 +37,13 @@ export default function UpdateProfileIconComponent({
       </Box>
 
       <Modal open={open} onClose={handleClose}>
-        <UpdateProfileModalComponent
-          handleClose={handleClose}
-          userData={userData}
-          setUpdateUserData={setUpdateUserData}
-        />
+        <div>
+          <UpdateProfileModalComponent
+            handleClose={handleClose}
+            userData={userData}
+            setUpdateUserData={setUpdateUserData}
+          />
+        </div>
       </Modal>
     </>
   );

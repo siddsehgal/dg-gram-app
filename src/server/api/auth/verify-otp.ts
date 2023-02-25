@@ -47,4 +47,4 @@ const PostVerifyOtp = async (
   });
 };
 
-export default withProtected(VerifyOtpHandler);
+export default await withProtected(VerifyOtpHandler);

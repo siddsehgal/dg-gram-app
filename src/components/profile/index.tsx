@@ -24,12 +24,17 @@ export default function Profile({ user_id }: any) {
   const [updateUserData, setUpdateUserData] = useState(false);
   const { enqueueSnackbar } = useSnackbar();
   const dispatch = useDispatch();
-  dispatch(changeBottomNav(BottomNavEnum.Profile));
 
   const router = useRouter();
+
+  useEffect(() => {
+    dispatch(changeBottomNav(BottomNavEnum.Profile));
+  }, []);
+
   useEffect(() => {
     getUserCall();
   }, [updateUserData]);
+
   const getUserCall = async () => {
     const res = await APICall({
       ...UserResource.GetUserAPI,

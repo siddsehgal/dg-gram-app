@@ -10,45 +10,48 @@ import { Op } from "sequelize";
 
 interface Data {}
 
-async function UpdateEmailHandler(
+async function UpdateUserNameHandler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
   if (req.method === "PATCH") {
-    await ErrorHandler(PostUpdateEmail, req, res);
+    await ErrorHandler(PatchUserName, req, res);
   } else {
     res.status(404).json({ message: "Not Fund" });
   }
 }
 
-const PostUpdateEmail = async (
+const PatchUserName = async (
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) => {
-  const { id } = req.body.req_user_data;
-  const { email } = req.body;
+  const { id: req_user_id } = req.body.req_user_data;
+  const { userName } = req.body;
 
-  if (!email)
-    return ErrorResponse({ message: "Email is Required!!" }, 400, res);
+  if (!userName)
+    return ErrorResponse({ message: "UserName is Required" }, 400, res);
 
-  const checkEmail = await User.findOne({
-    where: { email, id: { [Op.ne]: id } },
+  const checkUserName = await User.findOne({
+    where: {
+      user_name: userName,
+      id: { [Op.ne]: req_user_id },
+    },
+    attributes: ["id"],
   });
 
-  if (checkEmail) {
+  if (checkUserName)
     return ErrorResponse(
-      { message: "Email Address already in Use!!" },
+      { message: "This UserName is already taken. Try different UserName." },
       400,
       res
     );
-  }
 
-  await User.update({ email }, { where: { id } });
+  await User.update({ user_name: userName }, { where: { id: req_user_id } });
 
   res.status(200).send({
     success: true,
-    message: "Email Successfully Updated!!",
+    message: "User Name Updated Successfully",
   });
 };
 
-export default withProtected(UpdateEmailHandler);
+export default await withProtected(UpdateUserNameHandler);
