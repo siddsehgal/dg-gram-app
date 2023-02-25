@@ -37,4 +37,4 @@ const GetCheckLogin = async (
   });
 };
 
-export default await withProtected(CheckLoginHandler);
+export default withProtected(CheckLoginHandler);

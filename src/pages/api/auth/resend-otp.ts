@@ -41,4 +41,4 @@ const PostResendOtp = async (
   });
 };
 
-export default await withProtected(ResendOtp);
+export default withProtected(ResendOtp);

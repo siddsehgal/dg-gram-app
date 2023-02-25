@@ -102,4 +102,4 @@ const DeletePostLike = async (
 //   });
 // };
 
-export default await withProtected(PostLikeHandler);
+export default withProtected(PostLikeHandler);

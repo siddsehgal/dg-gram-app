@@ -54,4 +54,4 @@ const PatchUserName = async (
   });
 };
 
-export default await withProtected(UpdateUserNameHandler);
+export default withProtected(UpdateUserNameHandler);

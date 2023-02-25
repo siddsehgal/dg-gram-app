@@ -51,4 +51,4 @@ const PostUpdateEmail = async (
   });
 };
 
-export default await withProtected(UpdateEmailHandler);
+export default withProtected(UpdateEmailHandler);

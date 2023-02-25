@@ -50,4 +50,4 @@ const GetUserByUserName = async (
   });
 };
 
-export default await withProtected(SearchUserHandler);
+export default withProtected(SearchUserHandler);

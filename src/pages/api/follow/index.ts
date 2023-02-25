@@ -76,4 +76,4 @@ const DeleteFollow = async (
   });
 };
 
-export default await withProtected(FollowHandler);
+export default withProtected(FollowHandler);

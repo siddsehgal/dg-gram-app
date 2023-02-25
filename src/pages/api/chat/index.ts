@@ -61,4 +61,4 @@ const GetUserChat = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   });
 };
 
-export default await withProtected(UserHandler);
+export default withProtected(UserHandler);
