@@ -19,7 +19,7 @@ class PostLike extends Model<
   declare createdAt: CreationOptional<string>;
   declare updatedAt: CreationOptional<string>;
 }
-const InitModel = async (connection: Sequelize) => {
+const InitModel = (connection: Sequelize) => {
   PostLike.init(
     {
       // Model attributes are defined here
@@ -59,4 +59,4 @@ const InitModel = async (connection: Sequelize) => {
 };
 
 export { PostLike as PostLikeModelType };
-export default await InitModel(connection);
+export default InitModel(connection);

@@ -20,7 +20,7 @@ class Chat extends Model<InferAttributes<Chat>, InferCreationAttributes<Chat>> {
   declare updatedAt: CreationOptional<string>;
   declare room_data: NonAttribute<UsersRoomType>;
 }
-const InitModel = async (connection: Sequelize) => {
+const InitModel = (connection: Sequelize) => {
   Chat.init(
     {
       // Model attributes are defined here
@@ -69,4 +69,4 @@ const InitModel = async (connection: Sequelize) => {
   return Chat;
 };
 
-export default await InitModel(connection);
+export default InitModel(connection);

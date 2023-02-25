@@ -20,7 +20,7 @@ class PostComment extends Model<
   declare createdAt: CreationOptional<string>;
   declare updatedAt: CreationOptional<string>;
 }
-const InitModel = async (connection: Sequelize) => {
+const InitModel = (connection: Sequelize) => {
   PostComment.init(
     {
       // Model attributes are defined here
@@ -63,4 +63,4 @@ const InitModel = async (connection: Sequelize) => {
   return PostComment;
 };
 export { PostComment as PostCommentModelType };
-export default await InitModel(connection);
+export default InitModel(connection);

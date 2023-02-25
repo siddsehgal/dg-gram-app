@@ -25,7 +25,7 @@ class Post extends Model<InferAttributes<Post>, InferCreationAttributes<Post>> {
   declare updatedAt: CreationOptional<string>;
 }
 
-const InitModel = async (connection: Sequelize) => {
+const InitModel = (connection: Sequelize) => {
   Post.init(
     {
       // Model attributes are defined here
@@ -79,4 +79,4 @@ const InitModel = async (connection: Sequelize) => {
   return Post;
 };
 export { Post as PostModelType };
-export default await InitModel(connection);
+export default InitModel(connection);

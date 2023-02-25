@@ -19,7 +19,7 @@ class Follower extends Model<
   declare createdAt: CreationOptional<string>;
   declare updatedAt: CreationOptional<string>;
 }
-const InitModel = async (connection: Sequelize) => {
+const InitModel = (connection: Sequelize) => {
   Follower.init(
     {
       // Model attributes are defined here
@@ -58,4 +58,4 @@ const InitModel = async (connection: Sequelize) => {
   return Follower;
 };
 
-export default await InitModel(connection);
+export default InitModel(connection);

@@ -18,7 +18,7 @@ class UsersRoom extends Model<
   declare createdAt: CreationOptional<string>;
   declare updatedAt: CreationOptional<string>;
 }
-const InitModel = async (connection: Sequelize) => {
+const InitModel = (connection: Sequelize) => {
   UsersRoom.init(
     {
       // Model attributes are defined here
@@ -53,4 +53,4 @@ const InitModel = async (connection: Sequelize) => {
   return UsersRoom;
 };
 export { UsersRoom as UsersRoomType };
-export default await InitModel(connection);
+export default InitModel(connection);

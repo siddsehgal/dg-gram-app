@@ -21,7 +21,7 @@ class User extends Model<InferAttributes<User>, InferCreationAttributes<User>> {
   declare createdAt: CreationOptional<string>;
   declare updatedAt: CreationOptional<string>;
 }
-const InitModel = async (connection: Sequelize) => {
+const InitModel = (connection: Sequelize) => {
   User.init(
     {
       // Model attributes are defined here
@@ -81,4 +81,4 @@ const InitModel = async (connection: Sequelize) => {
   return User;
 };
 export { User as UserModelType };
-export default await InitModel(connection);
+export default InitModel(connection);
