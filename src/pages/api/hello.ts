@@ -11,7 +11,7 @@ export default async function SignInHandler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  res.status(404).json({ message: User });
+  res.status(404).json({ message: "Hi Hello World!!" });
 }
 
 const PostSignIn = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
