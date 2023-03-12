@@ -4,7 +4,7 @@ const ChatResource = {
     METHOD: "GET",
     PROTECTED: true,
     message: {
-      error: false,
+      error: true,
       success: false,
     },
   },
@@ -14,7 +14,7 @@ const ChatResource = {
     METHOD: "GET",
     PROTECTED: true,
     message: {
-      error: false,
+      error: true,
       success: false,
     },
   },

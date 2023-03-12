@@ -4,7 +4,7 @@ const PostResource = {
     METHOD: "POST",
     PROTECTED: true,
     message: {
-      error: false,
+      error: true,
       success: false,
     },
   },
@@ -13,7 +13,7 @@ const PostResource = {
     METHOD: "GET",
     PROTECTED: true,
     message: {
-      error: false,
+      error: true,
       success: false,
     },
   },
@@ -22,7 +22,7 @@ const PostResource = {
     METHOD: "DELETE",
     PROTECTED: true,
     message: {
-      error: false,
+      error: true,
       success: false,
     },
   },
@@ -32,7 +32,7 @@ const PostResource = {
     METHOD: "POST",
     PROTECTED: true,
     message: {
-      error: false,
+      error: true,
       success: false,
     },
   },
@@ -41,7 +41,7 @@ const PostResource = {
     METHOD: "DELETE",
     PROTECTED: true,
     message: {
-      error: false,
+      error: true,
       success: false,
     },
   },

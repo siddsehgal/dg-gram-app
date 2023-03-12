@@ -1,6 +1,6 @@
 import { AccountCircle } from "@mui/icons-material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { AppBar, IconButton, Toolbar, Typography } from "@mui/material";
+import { AppBar, IconButton, Link, Toolbar, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 import { RootState } from "redux/store";
@@ -43,6 +43,15 @@ export default function NavBar() {
             >
               Dg Gram
             </Typography>
+
+            <Link
+              sx={{ color: "white", cursor: "pointer" }}
+              target="_blank"
+              href="https://sidd-sehgal.github.io/portfolio/"
+            >
+              <Typography>Developer</Typography>
+            </Link>
+
             {/* {isLogin && (
               <div>
                 <IconButton

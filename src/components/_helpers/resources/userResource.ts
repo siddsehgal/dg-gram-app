@@ -4,7 +4,7 @@ const UserResource = {
     METHOD: "GET",
     PROTECTED: true,
     message: {
-      error: false,
+      error: true,
       success: false,
     },
   },
@@ -13,7 +13,7 @@ const UserResource = {
     METHOD: "GET",
     PROTECTED: true,
     message: {
-      error: false,
+      error: true,
       success: false,
     },
   },
@@ -22,7 +22,7 @@ const UserResource = {
     METHOD: "PATCH",
     PROTECTED: true,
     message: {
-      error: false,
+      error: true,
       success: false,
     },
   },
@@ -31,7 +31,7 @@ const UserResource = {
     METHOD: "POST",
     PROTECTED: true,
     message: {
-      error: false,
+      error: true,
       success: false,
     },
   },
@@ -40,7 +40,7 @@ const UserResource = {
     METHOD: "DELETE",
     PROTECTED: true,
     message: {
-      error: false,
+      error: true,
       success: false,
     },
   },
